@@ -1,6 +1,7 @@
 <script>
 </script>
 
+<<<<<<< HEAD
 <div class="wrapper">
 	<div class="title">Select your option</div>
 	<div class="box">
@@ -25,11 +26,24 @@
 			<div class="text">Answer 4</div>
 		</label>
 	</div>
+=======
+<div class="container">
+	<label>
+		<input checked={selected === 10} on:change={onChange} type="radio" name="amount" value="10" /> 10
+	</label>
+	<label class="correct">
+		<input checked={selected === 20} on:change={onChange} type="radio" name="amount" value="20" /> 20
+	</label>
+	<label class="wrong">
+		<input checked={selected === 30} on:change={onChange} type="radio" name="amount" value="30" /> 30
+	</label>
+>>>>>>> 07d9b5ced0da2bb67d3d635619bad4db9add1f04
 </div>
 
 <style>
 	.wrapper .box label {
 		display: flex;
+<<<<<<< HEAD
 		height: 60px;
 		width: 100%;
 		align-items: center;
@@ -88,5 +102,31 @@
 	}
 	.wrapper .box input[type='radio'] {
 		display: none;
+=======
+		flex-direction: column;
+		gap: 25px;
+		flex: 1;
+	}
+
+	.container label {
+		display: block;
+		width: 100%;
+		max-width: 466px;
+		height: 75px;
+
+		border: 5px solid rgba(198, 196, 247, 0.5);
+		box-sizing: border-box;
+		border-radius: 9px;
+	}
+
+	.container label.correct {
+		background: #95aadf;
+		border: 5px solid rgba(198, 196, 247, 0.5);
+	}
+
+	.container label.wrong {
+		background: #de957e;
+		border: 5px solid #f7c4c4;
+>>>>>>> 07d9b5ced0da2bb67d3d635619bad4db9add1f04
 	}
 </style>
