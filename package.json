@@ -22,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/supabase-js": "^1.29.3",
 		"svelte-cubed": "^0.2.1",
 		"three": "^0.136.0"
 	}
