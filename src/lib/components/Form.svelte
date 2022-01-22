@@ -19,17 +19,28 @@
 </div>
 
 <style>
+	@keyframes fadesIn {
+		0% {
+			transform: translateY(-5px);
+		}
+		100% {
+			transform: translateY(0px);
+		}
+	}
+
 	.wrapper .box label {
 		display: flex;
 		height: 60px;
 		width: 100%;
 		align-items: center;
-		border: 5px solid lightgray;
+		border: 5px solid rgba(198, 196, 247, 0.5);
 		border-radius: 8px;
 		margin: 10px 0;
 		padding-left: 20px;
 		cursor: default;
 		transition: all 0.3s ease;
+
+		animation: fadesIn 1s ease-in-out 0 1 normal forwards;
 	}
 	#option-1:checked ~ .option-1,
 	#option-2:checked ~ .option-2,
@@ -65,7 +76,7 @@
 		transform: translate(-50%, -50%) scale(1);
 	}
 	.wrapper .box label .text {
-		color: #0f4ce4;
+		font-family: Roboto;
 		font-size: 18px;
 		font-weight: 400;
 		padding-left: 10px;
@@ -82,5 +93,11 @@
 		flex-direction: column;
 		gap: 25px;
 		flex: 1;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.wrapper .box label {
+			height: 55px;
+		}
 	}
 </style>

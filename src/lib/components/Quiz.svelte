@@ -17,7 +17,7 @@
 
 <div class="quiz__container">
 	<div class="quiz__60">
-		<Progress />
+		<Progress questionNum={1} totalQuestions={2} />
 		<Questions />
 		<div class="form">
 			<Form {labels} />
@@ -37,6 +37,7 @@
 <style>
 	.quiz__container {
 		position: absolute;
+		bottom: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -59,10 +60,27 @@
 		margin: 35px 0 0 0;
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (min-width: 810px) {
+		.quiz__60 {
+			width: 70%;
+			padding: 1rem;
+		}
+	}
+
+	@media only screen and (max-width: 810px) {
 		.quiz__container {
 			width: 100%;
 			height: 50vh;
+			margin-bottom: 0;
+		}
+
+		.quiz__60 {
+			width: 80%;
+			padding: 0rem;
+		}
+
+		.form {
+			margin: 20px 0 0 0;
 		}
 	}
 </style>
