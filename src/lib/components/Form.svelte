@@ -1,7 +1,6 @@
 <script>
 </script>
 
-<<<<<<< HEAD
 <div class="wrapper">
 	<div class="title">Select your option</div>
 	<div class="box">
@@ -26,24 +25,11 @@
 			<div class="text">Answer 4</div>
 		</label>
 	</div>
-=======
-<div class="container">
-	<label>
-		<input checked={selected === 10} on:change={onChange} type="radio" name="amount" value="10" /> 10
-	</label>
-	<label class="correct">
-		<input checked={selected === 20} on:change={onChange} type="radio" name="amount" value="20" /> 20
-	</label>
-	<label class="wrong">
-		<input checked={selected === 30} on:change={onChange} type="radio" name="amount" value="30" /> 30
-	</label>
->>>>>>> 07d9b5ced0da2bb67d3d635619bad4db9add1f04
 </div>
 
 <style>
 	.wrapper .box label {
 		display: flex;
-<<<<<<< HEAD
 		height: 60px;
 		width: 100%;
 		align-items: center;
