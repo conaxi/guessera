@@ -1,6 +1,8 @@
 <script>
 	import Quiz from '$lib/components/Quiz.svelte';
 	import Scene from '$lib/components/Scene.svelte';
+	import { random } from '$lib/utils';
+	import { DB } from '$lib/database/db';
 </script>
 
 <div class="canvas">
@@ -8,7 +10,11 @@
 		<Scene />
 	</div>
 	<div class="quiz">
-		<Quiz />
+		{#await DB.readMany('countries', Array.from({ length: 4 }, () => random(1, 250)))}
+				<p>loading</p>			
+			{:then countries} 
+				<Quiz options={countries}/> 
+			{/await}
 	</div>
 </div>
 
