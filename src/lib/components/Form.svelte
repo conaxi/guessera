@@ -1,4 +1,5 @@
 <script>
+	export let labels;
 </script>
 
 <div class="wrapper">
@@ -8,22 +9,12 @@
 		<input type="radio" name="select" id="option-2" />
 		<input type="radio" name="select" id="option-3" />
 		<input type="radio" name="select" id="option-4" />
-		<label for="option-1" class="option-1">
-			<div class="dot" />
-			<div class="text">Answer 1</div>
-		</label>
-		<label for="option-2" class="option-2">
-			<div class="dot" />
-			<div class="text">Answer 2</div>
-		</label>
-		<label for="option-3" class="option-3">
-			<div class="dot" />
-			<div class="text">Answer 3</div>
-		</label>
-		<label for="option-4" class="option-4">
-			<div class="dot" />
-			<div class="text">Answer 4</div>
-		</label>
+		{#each labels as label}
+			<label for={label["id"]} class={label["id"]}>
+				<div class="dot" />
+				<div class="text">{label["text"]}</div>
+			</label>
+		{/each}
 	</div>
 </div>
 

@@ -2,6 +2,17 @@
 	import Progress from '$lib/components/Progress.svelte';
 	import Questions from '$lib/components/Questions.svelte';
 	import Form from '$lib/components/Form.svelte';
+
+	export let options;
+	let labels = [];
+
+	for (let i = 0; i < options.length; i++) {
+		labels.push({
+			id: `option-${i+1}`,
+			text: options[i]["name"]
+		});
+	console.log(labels)
+	}
 </script>
 
 <div class="quiz__container">
@@ -9,7 +20,7 @@
 		<Progress />
 		<Questions />
 		<div class="form">
-			<Form />
+			<Form {labels} />
 		</div>
 	</div>
 </div>
