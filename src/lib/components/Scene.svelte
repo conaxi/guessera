@@ -59,7 +59,7 @@
 		overflow: hidden;
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 1200px) {
 		.globe {
 			margin-left: 0 !important;
 		}

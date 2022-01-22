@@ -1,10 +1,9 @@
 <script>
 	let question = 'Where is this place?';
-	let questionNum = 1;
 </script>
 
 <div class="flex col gap-10">
-	<div class="quiz__num">Question {questionNum}</div>
+	<div class="quiz__num">Question 1</div>
 	<div class="quiz__question">{question}</div>
 </div>
 
@@ -29,9 +28,16 @@
 		font-family: Outfit;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 3rem;
+		font-size: var(--large-hf);
 		line-height: 60px;
 
-		color: #000000;
+		color: var(--black);
+	}
+
+	@media only screen and (max-width: 810px) {
+		.quiz__question {
+			font-size: var(--small-hf);
+			line-height: 30px;
+		}
 	}
 </style>
