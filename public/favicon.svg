@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    id="svg2"
+    sodipodi:docname="Hello_World-moon.svg"
+    viewBox="0 0 386.07 387.6"
+    version="1.1"
+    inkscape:version="0.48.5 r10040"
+  >
+  <defs
+      id="defs4"
+    >
+    <clipPath
+        id="clipPath18"
+      >
+      <path
+          id="path20"
+          inkscape:connector-curvature="0"
+          d="m0 600h800v-600h-800v600z"
+      />
+    </clipPath
+    >
+  </defs
+  >
+  <sodipodi:namedview
+      id="base"
+      bordercolor="#666666"
+      inkscape:pageshadow="2"
+      inkscape:window-y="19"
+      fit-margin-left="0"
+      pagecolor="#ffffff"
+      inkscape:window-height="1181"
+      inkscape:window-maximized="0"
+      inkscape:zoom="0.1767767"
+      inkscape:window-x="960"
+      showgrid="false"
+      borderopacity="1.0"
+      inkscape:current-layer="layer1"
+      inkscape:cx="-1058.3381"
+      inkscape:cy="373.3329"
+      fit-margin-top="0"
+      fit-margin-right="0"
+      fit-margin-bottom="0"
+      inkscape:window-width="960"
+      inkscape:pageopacity="0.0"
+      inkscape:document-units="px"
+  />
+  <g
+      id="layer1"
+      inkscape:label="Layer 1"
+      inkscape:groupmode="layer"
+      transform="translate(-452.68 -541.42)"
+    >
+    <g
+        id="g14"
+        transform="matrix(1.25 0 0 -1.25 145.71 1110.2)"
+      >
+      <g
+          id="g16"
+          clip-path="url(#clipPath18)"
+        >
+        <g
+            id="g22"
+            transform="translate(554.43 299.61)"
+          >
+          <path
+              id="path24"
+              style="fill:#7cb7ed"
+              inkscape:connector-curvature="0"
+              d="m0 0c0-85.29-69.14-154.43-154.43-154.43-85.288 0-154.43 69.139-154.43 154.43 0 85.289 69.14 154.43 154.43 154.43s154.43-69.141 154.43-154.43"
+          />
+        </g
+        >
+        <g
+            id="g26"
+            transform="translate(447 151.47)"
+          >
+          <path
+              id="path28"
+              style="fill:#ffffff"
+              inkscape:connector-curvature="0"
+              d="m0 0s-48.604-15.479-97.901 1.301c0 0 28.344 4.175 41.625 11.737 13.281 7.563 56.276-13.038 56.276-13.038"
+          />
+        </g
+        >
+        <g
+            id="g30"
+            transform="translate(487.95 212.66)"
+          >
+          <path
+              id="path32"
+              style="fill:#0fb55e"
+              inkscape:connector-curvature="0"
+              d="m0 0s-0.919 26.656-1.379 39.064c-0.46 12.409 4.136 20.682-1.839 32.171-5.974 11.49-1.379 20.682-6.893 21.141-5.515 0.459-22.979 3.677-32.63 0-9.652-3.677-30.793 12.409-31.252 22.979s-3.676 18.383-3.676 18.383 11.949 19.262 15.166 18.593 3.677 12.199 5.975 13.118c2.298 0.92 26.655 7.354 33.549 7.354 6.893 0 1.838-7.354 1.838-7.354l21.141-7.81 3.677 8.273 18.383-5.515s-0.459 11.03-4.596 12.409c-4.137 1.378-21.601 9.651-21.601 9.651s3.678-6.894 1.839-8.732c-1.839-1.839-7.813 8.732-7.813 8.732l-13.327 5.055s-9.192-1.379-14.248-3.217c-5.055-1.838-7.353-10.57-7.353-10.57s-9.191-4.596-15.166-3.217c-5.975 1.378-4.137 12.868-4.137 12.868s11.03 0.919 11.949 4.136-7.812 9.192-7.812 9.192l6.893 3.217 6.434 11.232 10.111-1.122 3.217 11.95-0.807 11.806s67.293-31.638 88.51-83.995l-10.953 6.928 4.596-10.111 1.838 1.379 5.515-10.11v-8.273l-2.757-12.71s-17.515 29.546-25.737 37.068c0 0 11.957-27.574 26.197-41.822l4.595 4.754v-15.324-6.894l-4.136-9.652-5.055-15.166-0.92-11.949v-14.247l-6.894-6.893-6.893-5.056v-5.975l-6.894-9.203-9.651-10.11-9.651-6.435h-7.353z"
+          />
+        </g
+        >
+        <g
+            id="g34"
+            transform="translate(355.05 160.34)"
+          >
+          <path
+              id="path36"
+              style="fill:#0fb55e"
+              inkscape:connector-curvature="0"
+              d="m0 0-9.191 11.949 1.379 6.435h5.974l-1.274 6.589 1.734 8.577 1.378 6.433 5.199 5.407s11.807 4.705 10.428 21.25c0 0 10.109 13.788 7.812 21.14-2.298 7.353-16.145 6.894-16.145 6.894l-22.919 9.651s-1.838 9.652-8.272 10.571c-6.435 0.918-8.273-3.677-11.031 0-2.758 3.676-6.576 9.194-13.858 9.652s-16.474 6.432-16.474 6.432-1.379 5.055-9.191 3.217c0 0-5.056 5.056-2.758 15.167 0 0-0.459 5.515-7.354 3.217 0 0-5.514 5.975-7.353 5.975-1.838 0-4.596 17.464 3.678 25.277 0 0 7.812 9.191 16.545 3.676 0 0-0.461-8.732 0.918-12.868s4.136 5.975 4.136 5.975l0.46 12.868s5.975 2.758 11.031 7.353c5.054 4.596 3.216 10.571 10.11 15.166 6.893 4.596 8.272 0 8.272 0l0.459 7.813h6.435l15.626 6.894s-7.354-0.46-10.111 3.677l19.761 10.57v5.974l-1.355 12.409-4.619-5.515-0.918 5.515-8.733 1.121h-3.216l-7.354-3.419-0.46-4.596-8.272-3.676-4.137 4.136 3.218 4.136 3.216 3.419 8.566 11.597s-56.809-31.864-73.36-88.241c0 0-0.925-17.772-1.384-24.206-0.46-6.434 5.054-12.408 5.054-12.408h5.056l1.838-4.596 4.136-1.379 2.299-1.379 1.378-3.583 1.838-6.528 4.137-0.92 2.297-4.135 2.758-0.46-0.919 3.676h3.677l1.378-3.216-4.136-3.217-1.379-3.218-0.459-7.352 0.459-5.516 0.46-5.055-4.136-2.298 0.918-5.055 0.461-3.217v-5.056l-2.299-0.919 16.545-22.519 5.056-1.839 3.216-0.459 5.056-1.839 4.137-7.812s13.327-29.415 15.166-33.55c1.838-4.133 21.141-21.138 29.412-19.759"
+          />
+        </g
+        >
+        <g
+            id="g38"
+            transform="translate(400 455.04)"
+          >
+          <path
+              id="path40"
+              style="fill:#ffffff"
+              inkscape:connector-curvature="0"
+              d="m0 0c51.067 0 79.29-21.887 79.29-21.887s-18.978-8.148-48.391 0c0 0-22.689-1.096-38.656-7.819-15.966-6.723-24.437 10.924-24.437 10.924s-13.981-9.608-38.049 1.919c0 0 31.781 16.863 70.243 16.863"
+          />
+        </g
+        >
+      </g
+      >
+    </g
+    >
+  </g
+  >
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

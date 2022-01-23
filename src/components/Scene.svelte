@@ -41,7 +41,7 @@
 	};
 	const cartesian = sphericalToCartesian(spherical.lat, spherical.lon);
 	const marker = new THREE.Mesh(
-		new THREE.SphereBufferGeometry(radius / 10, 20, 20),
+		new THREE.SphereBufferGeometry(radius / 15, 20, 20),
 		new THREE.MeshBasicMaterial({ color: 0xaae9b3 })
 	);
 	marker.position.set(cartesian.x, cartesian.y, cartesian.z);
