@@ -35,14 +35,16 @@ After clicking play on the homepage, you will start a game session. On this new 
 
 ## Installation
 
-- Clone the [API](https://github.com/masmeert/guessera-api) and run
-  ```
-  pip install -r requirements.txt
-  python api.py
-  ```
-- Clone this repo and run
+- Clone this repo
+- Run the web app
   ```
   npm i
   npm run dev
   ```
   The website is now available at _localhost:8080_
+- Run the api
+  ```
+  cd guessera-api
+  pip install -r requirements.txt
+  python api.py
+  ```
