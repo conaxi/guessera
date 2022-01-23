@@ -42,7 +42,7 @@
 	const cartesian = sphericalToCartesian(spherical.lat, spherical.lon);
 	const marker = new THREE.Mesh(
 		new THREE.SphereBufferGeometry(radius / 10, 20, 20),
-		new THREE.MeshBasicMaterial({ color: 0x00ffff })
+		new THREE.MeshBasicMaterial({ color: 0xaae9b3 })
 	);
 	marker.position.set(cartesian.x, cartesian.y, cartesian.z);
 	scene.add(marker);
@@ -56,7 +56,7 @@
 	scene.add(pointLight);
 
 	// CAMERA
-	camera.position.z = 3;
+	camera.position.z = 2;
 
 	// RENDER
 	const animate = () => {
