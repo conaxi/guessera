@@ -1,20 +1,27 @@
 <script>
 	import { splitArrayIntoChunks, random } from '../utils';
 	import { playing } from '../store';
-	import Progress from "./Progress.svelte"
+	import Progress from './Progress.svelte';
+	import Scene from './Scene.svelte';
 
 	export let countries;
 
 	let selected,
+		pos = [],
 		score = 0,
 		current = 0,
 		questions = splitArrayIntoChunks(countries, 4),
 		n = questions.length;
 
 	questions.forEach((question) => {
-		question[random(0, 3)]["correct"] = true;
-	})
-	let curQue = 1
+		const rand = random(0, 3);
+		question[rand]['correct'] = true;
+		pos.push({
+			lat: question[rand]['lat'], 
+			lon: question[rand]['lng'] }
+		);
+	});
+	let curQue = 1;
 	async function submitAnswer(index) {
 		if (questions[current][index]['correct'] == true) score++;
 		current++;
@@ -27,14 +34,15 @@
 		<div class="form">
 			<div class="wrapper">
 				{#if current == n}
-				<h1 class="quiz__question">You made it, your score: {score}/{questions.length}</h1>
-				<button class="quit"
-					on:click={() => {
-						$playing = false;
-					}}>
-					Quit
-				</button>
-
+					<h1 class="quiz__question">You made it, your score: {score}/{questions.length}</h1>
+					<button
+						class="quit"
+						on:click={() => {
+							$playing = false;
+						}}
+					>
+						Quit
+					</button>
 				{:else}
 					<div class="flex col gap-10">
 						<Progress questionNum={curQue} totalQuestions={n} />
@@ -43,11 +51,18 @@
 						<div class="title">Select your option</div>
 						<div class="box">
 							{#each questions[current] as option, i}
-								<input on:click={() => submitAnswer(i)} type="radio" value={i} bind:group={selected} name={option["name"]} id={`option-${i+1}`}/>
+								<input
+									on:click={() => submitAnswer(i)}
+									type="radio"
+									value={i}
+									bind:group={selected}
+									name={option['name']}
+									id={`option-${i + 1}`}
+								/>
 
 								<label for={`option-${i + 1}`} class={`option-${i + 1}`}>
 									<div class="dot" />
-									<div class="text">{option["name"]}</div>
+									<div class="text">{option['name']}</div>
 								</label>
 							{/each}
 						</div>
@@ -57,21 +72,15 @@
 		</div>
 	</div>
 	<div class="sphere">
+		<Scene radius="1" pos={pos[current]} />
 	</div>
 </div>
 
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,700&display=swap"
-		rel="stylesheet"
-	/>
-</svelte:head>
-
-
 <style>
 	/* QUIZ */
+	.title {
+		font-family: Roboto;
+	}
 	.quiz__container {
 		position: absolute;
 		bottom: 0;
@@ -122,13 +131,13 @@
 	.full-quit {
 		width: 100%;
 		height: 100%;
-		background-color: #96E6DB;
+		background-color: #96e6db;
 	}
 	.quit {
 		margin-top: 2rem;
 
 		background-color: #e8a1ae;
-		border: 5px solid #F7C4C4;
+		border: 5px solid #f7c4c4;
 		box-sizing: border-box;
 		border-radius: 5px;
 		width: 50%;
@@ -166,7 +175,6 @@
 		color: var(--black);
 		margin-bottom: 1rem;
 	}
-
 
 	@media only screen and (max-width: 810px) {
 		.quiz__question {

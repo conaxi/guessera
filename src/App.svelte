@@ -27,8 +27,8 @@
 
 			</div>
 			<div class="flex col gap-20 center full">
-				<h1 class="header">Learn geography through <span class="secondary">interactive</span> and <span class="secondary">gamified</span> quiz</h1>
-				<p class="desc">Geography is often taught in a very theorical manner, forcing to learn by heart a list of countries. This
+				<h1 class="header">Learn geography through an <span class="secondary">interactive</span> and <span class="secondary">gamified</span> quiz</h1>
+				<p class="desc">Geography is often taught in a very theorical manner, forcing students to learn by heart a list of countries. This
 				project aims to offer an interactive alternative, where students can learn by having fun and experiencing
 				things firsthand.</p>
 				<div>
@@ -43,16 +43,6 @@
 		</div>
 	{/if}
 </main>
-
-<svelte:head>
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,700&display=swap"
-		rel="stylesheet"
-	/>
-</svelte:head>
-
 
 <style>
 .start-screen {
