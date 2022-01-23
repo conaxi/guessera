@@ -1,44 +1,72 @@
 <script>
-  import vertexShader from "../shaders/sphere.vert";
-  import fragmentShader from "../shaders/sphere.frag";
-  import * as THREE from "three";
+	import * as THREE from 'three';
+	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+	import { sphericalToCartesian } from '../utils';
 
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    innerWidth / innerHeight,
-    0.1,
-    1000
-  );
+	export let pos, radius;
 
-  const renderer = new THREE.WebGL1Renderer({
-    antialias: true,
-  });
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(innerWidth, innerHeight);
-  document.body.appendChild(renderer.domElement);
+	// SETUP
+	const scene = new THREE.Scene();
+	const camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1000);
 
-  const sphere = new THREE.Mesh(
-    new THREE.SphereGeometry(5, 50, 50),
-    new THREE.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
-      uniforms: {
-        globeTexture: {
-          value: new THREE.TextureLoader().load("earth.jpg"),
-        }
-      }
-    })
-  );
-  scene.add(sphere);
-  camera.position.z = 10;
+	// RENDERER
+	const renderer = new THREE.WebGL1Renderer({
+		antialias: true,
+		alpha: true
+	});
+	renderer.setPixelRatio(window.devicePixelRatio);
+	renderer.setSize(innerWidth, innerHeight);
+	document.body.appendChild(renderer.domElement);
 
-  const animate = () => {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
-  };
+	// CONTROLS
+	const controls = new OrbitControls(camera, renderer.domElement);
 
-  animate();
+	// EARTH
+	const globe = new THREE.Mesh(
+		new THREE.SphereGeometry(radius, 30, 30),
+		new THREE.MeshPhongMaterial({
+			map: THREE.ImageUtils.loadTexture('earth.jpg'),
+			bumpMap: THREE.ImageUtils.loadTexture('earthbump.jpg'),
+			bumpScale: 0.06,
+			specularMap: THREE.ImageUtils.loadTexture('earthspec.jpg'),
+			specular: new THREE.Color('grey')
+		})
+	);
+	scene.add(globe);
+
+	// MARKER
+	const spherical = {
+		lat: THREE.Math.degToRad(90 - pos.lat),
+		lon: THREE.Math.degToRad(pos.lon)
+	};
+	const cartesian = sphericalToCartesian(spherical.lat, spherical.lon);
+	const marker = new THREE.Mesh(
+		new THREE.SphereBufferGeometry(radius / 10, 20, 20),
+		new THREE.MeshBasicMaterial({ color: 0x00ffff })
+	);
+	marker.position.set(cartesian.x, cartesian.y, cartesian.z);
+	scene.add(marker);
+
+	// LIGHTS
+	const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+	scene.add(ambientLight);
+
+	const pointLight = new THREE.PointLight(0xffffff, 1);
+	pointLight.position.set(5, 3, 5);
+	scene.add(pointLight);
+
+	// CAMERA
+	camera.position.z = 3;
+
+	// RENDER
+	const animate = () => {
+		requestAnimationFrame(animate);
+		renderer.render(scene, camera);
+		//globe.rotation.y += 0.01;
+		controls.update();
+	};
+
+	animate();
 </script>
 
-<canvas/>
+<canvas />

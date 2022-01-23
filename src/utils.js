@@ -12,16 +12,10 @@ export const splitArrayIntoChunks = (arr, size) => {
 	return chunks;
 };
 
-export const degToRad = (deg) => {
-	return (deg * Math.PI) / 180;
-};
-
-export const sphericalToCartesian = (latitude, longitude, radius = 100) => {
-	latitude = degToRad(latitude);
-	longitude = degToRad(longitude);
+export const sphericalToCartesian = (phi, theta) => {
 	return {
-		x: radius * Math.cos(latitude) * Math.cos(longitude),
-		y: radius * Math.cos(latitude) * Math.sin(longitude),
-		z: radius * Math.sin(latitude)
+		x: -(Math.sin(phi) * Math.cos(theta)),
+		y: Math.sin(phi) * Math.sin(theta),
+		z: Math.cos(phi)
 	};
 };

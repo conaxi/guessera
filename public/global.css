@@ -1,25 +1,39 @@
 :root {
+	/* Typefaces | hf = headfont */
+	--xlarge-hf: 3.75rem; /* 60px */
+	--large-hf: 3rem; /* 48px */
+	--med-hf: 2.25rem; /* 36px */
+	--small-hf: 1.875rem; /* 30px */
+	--base-f: 1rem; /* 16px */
+	--xbase-f: 1.125rem; /* 18px */
+	/* Colour */
 	/* catppuccin color palette */
-	--rosewater: hsl(10, 56, 91);
-	--flamingo: hsl(0, 59, 88);
-	--mauve: hsl(279, 70, 83);
-	--pink: hsl(316, 72, 86);
-	--maroon: hsl(349, 60, 77);
-	--red: hsl(342, 79, 75);
-	--peach: hsl(24, 88, 78);
-	--yellow: hsl(41, 88, 84);
-	--green: hsl(128, 58, 79);
-	--teal: hsl(171, 53, 81);
-	--blue: hsl(207, 93, 79);
-	--sky: hsl(189, 71, 73);
-	--lavender: hsl(238, 100, 89);
-	--black0: hsl(251, 33, 9);
-	--black1: hsl(251, 19, 12);
-	--black2: hsl(240, 20, 15);
-	--black3: hsl(249, 18, 22);
-	--black4: hsl(254, 12, 36);
-	--gray0: hsl(247, 8, 46);
-	--gray1: hsl(274, 11, 59);
-	--gray2: hsl(285, 10, 75);
-	--white: hsl(220, 38, 89);
+	--rosewater: #f5dfdb;
+	--flamingo: #f2cece;
+	--mauve: #ddb5f2;
+	--pink: #f5c2e7;
+	--maroon: #e8a1ae;
+	--red: #f28dab;
+	--peach: #f8bd96;
+	--yellow: #fae3b2;
+	--green: #aae9b3;
+	--teal: #b5e8e1;
+	--blue: #98cefb;
+	--sky: #89dceb;
+	--lavender: #c7c9ff;
+	--black0: #120f1f;
+	--black1: #1b1924;
+	--black2: #1f1f2e;
+	--black3: #312e42;
+	--black4: #565167;
+	--gray0: #6e6c7f;
+	--gray1: #988ba2;
+	--gray2: #c2b9c6;
+	--white: #d8dfee;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
