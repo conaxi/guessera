@@ -1,49 +1,45 @@
 # Guessera
+![Svelte](https://img.shields.io/badge/Svelte-black?style=flat-square&logo=Svelte)
+![GLSL](https://img.shields.io/badge/WebGL-black?style=flat-square&logo=webgl)
+![Three](https://img.shields.io/badge/Three-black?style=flat-square&logo=three.js)
+![Flask](https://img.shields.io/badge/Flask-black?style=flat-square&logo=Flask)
+![SQLite](https://img.shields.io/badge/SQLite-black?style=flat-square&logo=SQLite)
 
-A geographic game for people with all sort of knowledge about Geography.
+A fun and interactive geography game!
 
-## The point of this
+## Our goal
 
-Geography doesn't have to be boring. At school, geography might be the most boring subjects out of others. Instead of something interactive, we read books and looking at maps, forcing us to remember locations and countries. This project is made to help people learn geography easier, in a fun and interactive way. When we learning, our experience matters most, it also affects how brain remember things. Opposite of reading books and studying boring geography in school which makes geography have a bad reputation.
+Geography is often taught in a very theorical manner, forcing to learn by heart a list of countries. This project aims to offer an interactive alternative, where students can learn by having fun and experiencing things firsthand.
 
-# Guide
+## Guide
 
-### Navigating in the start
-
-- First, go to our homepage and click play.
-  ![img txt]("img")
-
-### Playing the game
-
-- On the right, there is Earth. It displays the location of the country.
-- On the top, there is a progress bar, it displays how much questions is left.
-- You have 4 options to pick from, one of them is correct, choose carefuly because you only have 1 choice.
-- If you choose right question, the button will turn purple'ish
-  ![img txt]("img")
-
-### Finishing the game
-
-- When you answered all of the questions, it will display the total score.
-  ![img txt]("img")
+### How does it work ?
+After clicking play on the homepage, you will start a game session. On this new window you will find a globe and a form. Your goal is to find which country out the 4 form options is the one pinned on the globe. The progress bar on top shows how many questions are left. Once that bar is filled, your score will be shown and you will be redirected to the homepage once again.
 
 ## Features
 
-- Display countries on Earth
-- Responsive
-- Working Quiz
-- Our own API - [API REPO]("https://github.com/masmeert/guessera-api")
+- Interactive 3D model of the Earth
+- Points to any position on the Earth given spherical coordinates
+- Database with all countries
+- Responsive & sleek UI
 
 ## Upcoming / Planned
 
+- Dockerized API w/ PostgreSQL
 - Leaderboard
 - Login System
 - Advanced displaying information on Earth
+- Automatic animations between location markers
 
-## Tech Stack
-
-- THREE.js
-- Svelte.js
-- CSS
-- JS
-- Python
-- GLSL
+## Installation
+- Clone the [API](https://github.com/masmeert/guessera-api) and run
+  ```
+  pip install -r requirements.txt
+  python api.py
+  ```
+- Clone this repo and run
+  ```
+  npm i
+  npm run dev
+  ```
+The website is now available at *localhost:8080*
