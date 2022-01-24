@@ -10,7 +10,7 @@ A fun and interactive geography game!
 
 ## Our goal
 
-Geography is often taught in a very theorical manner, forcing students to learn by heart a list of countries. This project aims to offer an interactive alternative, where they can learn by having fun and experiencing things firsthand.
+Geography is often taught in a very theorical manner, forcing students to learn a list of countries by heart. This project aims to offer an interactive alternative, where they can learn by having fun and experiencing things firsthand.
 
 ## Guide
 
@@ -21,13 +21,13 @@ After clicking play on the homepage, you will start a game session. On this new 
 ## Features
 
 - Interactive 3D model of the Earth
-- Points to any position on the Earth given spherical coordinates
 - Database with all countries
 - Responsive & sleek UI
+- Entirely dockerized
 
 ## Upcoming / Planned
 
-- Dockerized API w/ PostgreSQL
+- Points to any position on the Earth given spherical coordinates
 - Leaderboard
 - Login System
 - Advanced displaying information on Earth
@@ -36,15 +36,10 @@ After clicking play on the homepage, you will start a game session. On this new 
 ## Installation
 
 - Clone this repo
-- Run the web app
+- Fill the .env file
+- Run everything
   ```
-  npm i
-  npm run dev
+  docker compose up -d --build
   ```
-  The website is now available at _localhost:8080_
-- Run the api
-  ```
-  cd guessera-api
-  pip install -r requirements.txt
-  python api.py
-  ```
+- Create the country table and populate it using the SQL scripts in ./database.
+- The website is   available at _localhost:8080_
