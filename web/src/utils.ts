@@ -15,10 +15,13 @@ export const splitArrayIntoChunks = (
   return chunks;
 };
 
-export const sphericalToCartesian = (phi: number, theta: number) => {
-  return {
-    x: -(Math.sin(phi) * Math.cos(theta)),
-    y: Math.sin(phi) * Math.sin(theta),
-    z: Math.cos(phi),
-  };
+export const calcPosFromCalcLonRad = (lat: number, lon: number) => {
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lon + 180) * (Math.PI / 180);
+
+  let x = -(Math.sin(phi) * Math.cos(theta));
+  let z = Math.sin(phi) * Math.sin(theta);
+  let y = Math.cos(phi);
+  console.log(x, y, z);
+  return { x: x, y: y, z: z };
 };

@@ -1,7 +1,8 @@
 <script>
 	import * as THREE from 'three';
+import { LatheBufferGeometry } from 'three';
 	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-	import { sphericalToCartesian } from '../utils';
+	import { calcPosFromCalcLonRad } from '../utils';
 
 	export let pos, radius;
 
@@ -35,16 +36,12 @@
 	scene.add(globe);
 
 	// MARKER
-	const spherical = {
-		lat: THREE.Math.degToRad(90 - pos.lat),
-		lon: THREE.Math.degToRad(pos.lon)
-	};
-	const cartesian = sphericalToCartesian(spherical.lat, spherical.lon);
+	const {x, y, z}  = calcPosFromCalcLonRad(pos.lat, pos.lon)
 	const marker = new THREE.Mesh(
 		new THREE.SphereBufferGeometry(radius / 20, 20, 20),
 		new THREE.MeshBasicMaterial({ color: 0xaae9b3 })
 	);
-	marker.position.set(cartesian.x, cartesian.y, cartesian.z);
+	marker.position.set(x, y, z);
 	scene.add(marker);
 
 	// LIGHTS
