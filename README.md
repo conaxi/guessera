@@ -1,10 +1,10 @@
 # Guessera
 
 ![Svelte](https://img.shields.io/badge/Svelte-black?style=flat-square&logo=Svelte)
-![GLSL](https://img.shields.io/badge/WebGL-black?style=flat-square&logo=webgl)
+![Typescript](https://img.shields.io/badge/Typescript-black?style=flat-square&logo=Typescript)
 ![Three](https://img.shields.io/badge/Three-black?style=flat-square&logo=three.js)
-![Flask](https://img.shields.io/badge/Flask-black?style=flat-square&logo=Flask)
-![SQLite](https://img.shields.io/badge/SQLite-black?style=flat-square&logo=SQLite)
+![Express](https://img.shields.io/badge/Express-black?style=flat-square&logo=Express)
+![Postgres](https://img.shields.io/badge/Postgres-black?style=flat-square&logo=PostgreSQL)
 
 A fun and interactive geography game!
 

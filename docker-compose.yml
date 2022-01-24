@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:12.0-alpine
+    container_name: guessera-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports: 
+      - "5432:5432"
+    env_file:
+      - ./configs/.env
+  api:
+    container_name: guessera-api
+    build: ./api
+    ports:
+      - "8000:8000"
+    restart: on-failure
+    depends_on:
+      - db
+    env_file:
+      - ./configs/.env
+  web:
+    container_name: guessera-web
+    build: ./web
+    ports:
+      - "8080:8080"
+    restart: on-failure
+    depends_on:
+      - api
+    env_file:
+      - ./configs/.env
+volumes:
+  postgres_data:
