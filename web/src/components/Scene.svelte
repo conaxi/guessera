@@ -1,6 +1,5 @@
 <script>
 	import * as THREE from 'three';
-import { LatheBufferGeometry } from 'three';
 	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 	import { calcPosFromCalcLonRad } from '../utils';
 
@@ -38,8 +37,8 @@ import { LatheBufferGeometry } from 'three';
 	// MARKER
 	const {x, y, z}  = calcPosFromCalcLonRad(pos.lat, pos.lon)
 	const marker = new THREE.Mesh(
-		new THREE.SphereBufferGeometry(radius / 20, 20, 20),
-		new THREE.MeshBasicMaterial({ color: 0xaae9b3 })
+		new THREE.SphereBufferGeometry(0.01, 20, 20),
+		new THREE.MeshBasicMaterial({ color: 0xff0000 })
 	);
 	marker.position.set(x, y, z);
 	scene.add(marker);

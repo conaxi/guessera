@@ -1,3 +1,9 @@
+export interface Cartesian {
+  x: number;
+  y: number;
+  z: number;
+}
+
 export const random = (min: number, max: number): number => {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -15,13 +21,13 @@ export const splitArrayIntoChunks = (
   return chunks;
 };
 
-export const calcPosFromCalcLonRad = (lat: number, lon: number) => {
-  const phi = (90 - lat) * (Math.PI / 180);
-  const theta = (lon + 180) * (Math.PI / 180);
+export const calcPosFromCalcLonRad = (lat: number, lon: number): Cartesian => {
+  const phi: number = (90 - lat) * (Math.PI / 180);
+  const theta: number = (lon + 180) * (Math.PI / 180);
 
-  let x = -(Math.sin(phi) * Math.cos(theta));
-  let z = Math.sin(phi) * Math.sin(theta);
-  let y = Math.cos(phi);
-  console.log(x, y, z);
-  return { x: x, y: y, z: z };
+  return {
+    x: -(Math.sin(phi) * Math.cos(theta)),
+    y: Math.cos(phi),
+    z: Math.sin(phi) * Math.sin(theta),
+  };
 };

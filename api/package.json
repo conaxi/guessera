@@ -5,7 +5,8 @@
   "main": "src/server.ts",
   "scripts": {
     "dev": "nodemon src/server.ts",
-    "build": "rm -rf build/ && prettier --write src/ && npx tsc"
+    "build": "rm -rf build/ && prettier --write src/ && npx tsc",
+    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "keywords": [],
   "author": "",
